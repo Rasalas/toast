@@ -1,6 +1,5 @@
 # Toast messages
 
-[Preview](https://tbuck.de/example/toast/)
 ## Installation
 copy the `/toast` directory somewhere in your project and link to both files in your HTML 
 ```HTML
