@@ -24,9 +24,11 @@ class Toast {
         });
 
         this.toast = document.createElement("div");
+
         this.toast.classList.add("toast");
         this.toast.classList.add(this.options.type);
         this.toast.classList.add(this.options.position);
+        this.toast.classList.add("duration-"+this.options.duration);
 
         this.toast.innerHTML = this.options.message;
         document.body.appendChild(this.toast);
@@ -38,9 +40,9 @@ class Toast {
      * @returns {Toast} this instance of the Toast class
      */
     show() {
-        this.toast.classList.add("show-"+this.options.duration);
+        this.toast.classList.add("show");
         setTimeout(() => {
-            this.toast.classList.remove("show-"+this.options.duration);
+            this.toast.classList.remove("show");
         }, (this.options.duration === "long" ? this.constants.LONG_DELAY+400 : this.constants.SHORT_DELAY+400));
         return this;
     }
