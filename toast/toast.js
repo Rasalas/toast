@@ -21,6 +21,7 @@ class Toast {
         this.constants = Object.freeze({
             SHORT_DELAY: 2000,
             LONG_DELAY: 4000,
+            MOVING_DELAY: 500
         });
 
         this.toast = document.createElement("div");
@@ -43,7 +44,7 @@ class Toast {
         this.toast.classList.add("show");
         setTimeout(() => {
             this.toast.classList.remove("show");
-        }, (this.options.duration === "long" ? this.constants.LONG_DELAY+400 : this.constants.SHORT_DELAY+400));
+        }, (this.options.duration === "long" ? this.constants.LONG_DELAY+this.constants.MOVING_DELAY : this.constants.SHORT_DELAY+this.constants.MOVING_DELAY));
         return this;
     }
 }
