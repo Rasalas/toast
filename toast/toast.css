@@ -1,0 +1,191 @@
+/* The toast - position it at the top and in the middle of the screen */
+
+.toast {
+    font-family: sans-serif;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #2e7d32;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+}
+
+.toast.primary {
+    background-color: var(--primary);
+}
+
+.toast.secondary {
+    background-color: var(--secondary);
+}
+
+.toast.success {
+    background-color: var(--success);
+}
+
+.toast.info {
+    background-color: var(--info);
+}
+
+.toast.warning {
+    background-color: var(--warning);
+}
+
+.toast.danger {
+    background-color: var(--danger);
+}
+
+.toast.light {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.toast.dark {
+    background-color: var(--dark);
+}
+
+.toast.top {
+    top: 30px;
+}
+
+.toast.bottom {
+    bottom: 30px;
+}
+
+.toast.bottom.show-short {
+    -webkit-animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 2s;
+    animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 2s;
+}
+
+.toast.top.show-short {
+    -webkit-animation: fadein_top 0.5s, fadeout_top 0.5s 2s;
+    animation: fadein_top 0.5s, fadeout_top 0.5s 2s;
+}
+.toast.bottom.show-long {
+    -webkit-animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 4s;
+    animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 4s;
+}
+
+.toast.top.show-long {
+    -webkit-animation: fadein_top 0.5s, fadeout_top 0.5s 4s;
+    animation: fadein_top 0.5s, fadeout_top 0.5s 4s;
+}
+
+.toast.show-long {
+    visibility: visible;
+}
+
+.toast.show-short {
+    visibility: visible;
+}
+
+/* Animations to fade the toast in and out */
+/* top */
+@-webkit-keyframes fadein_top {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein_top {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout_top {
+    from {
+        top: 30px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout_top {
+    from {
+        top: 30px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+/* bottom */
+@-webkit-keyframes fadein_bottom {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein_bottom {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout_bottom {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout_bottom {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
