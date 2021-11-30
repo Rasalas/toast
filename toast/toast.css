@@ -41,6 +41,7 @@
 
 .toast.warning {
     background-color: var(--warning);
+    color: var(--dark);
 }
 
 .toast.danger {
@@ -64,30 +65,26 @@
     bottom: 30px;
 }
 
-.toast.bottom.show-short {
+.toast.bottom.duration-short {
     -webkit-animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 2s;
     animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 2s;
 }
 
-.toast.top.show-short {
+.toast.top.duration-short {
     -webkit-animation: fadein_top 0.5s, fadeout_top 0.5s 2s;
     animation: fadein_top 0.5s, fadeout_top 0.5s 2s;
 }
-.toast.bottom.show-long {
+.toast.bottom.duration-long {
     -webkit-animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 4s;
     animation: fadein_bottom 0.5s, fadeout_bottom 0.5s 4s;
 }
 
-.toast.top.show-long {
+.toast.top.duration-long {
     -webkit-animation: fadein_top 0.5s, fadeout_top 0.5s 4s;
     animation: fadein_top 0.5s, fadeout_top 0.5s 4s;
 }
 
-.toast.show-long {
-    visibility: visible;
-}
-
-.toast.show-short {
+.toast.show {
     visibility: visible;
 }
 
